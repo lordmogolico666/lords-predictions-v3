@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lord's Predictions — NBA & MLB</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+  <style>
+    :root { color-scheme: dark; }
+    body {
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top left, rgba(249, 115, 22, 0.10), transparent 32rem),
+        radial-gradient(circle at top right, rgba(16, 185, 129, 0.08), transparent 30rem),
+        #090b14;
+    }
+    button:disabled { cursor: not-allowed; opacity: 0.55; }
+    .card-glow { box-shadow: 0 0 28px rgba(16, 185, 129, 0.07); }
+    .loading-bar { animation: loading 1.2s ease-in-out infinite; }
+    @keyframes loading {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(320%); }
+    }
+  </style>
+</head>
+<body class="text-slate-100 font-sans antialiased">
+  <div id="app" class="max-w-7xl mx-auto p-3 sm:p-6"></div>
+
+  <!-- Módulos clásicos: el orden importa; main.js inicializa al final. -->
+  <script src="config.js"></script>
+  <script src="utils.js"></script>
+  <script src="model.js"></script>
+  <script src="api.js"></script>
+  <script src="store.js"></script>
+  <script src="ui.js"></script>
+  <script src="selftests.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
